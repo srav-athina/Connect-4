@@ -5,7 +5,7 @@ class Row extends Component {
   render() {
     const { makeMove, row } = this.props;
     let output = Object.keys(row).map(function(i) {
-      return (<Square key={i} val={row[i]} colIndex={i} makeMove={makeMove}/>)
+      return (<Square key={i} makeMove={makeMove} colIndex={i} val={row[i]} />)
     });
     return (<tr>{output}</tr>)
   };
